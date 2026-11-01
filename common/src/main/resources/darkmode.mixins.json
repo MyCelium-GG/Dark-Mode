@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "my.celium.org.darkmode.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "GuiGraphicsExtractorMixin",
+    "GuiTextRenderStateMixin",
+    "LoadingOverlayMixin",
+    "MinecraftMixin",
+    "OptionsScreenMixin",
+    "SpriteContentsAccessor",
+    "SpriteLoaderMixin",
+    "TextureContentsMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
