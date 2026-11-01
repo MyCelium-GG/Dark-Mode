@@ -4,6 +4,8 @@
 
 Screens from other mods go dark too, so you don't need a separate resource pack for each mod.
 
+![A chest screen in dark mode](https://wiki.mycelium-gg.org/darkmode/img/chest.png)
+
 ## What you get
 
 - Dark menus, inventories, chests, furnaces, anvils and books
@@ -20,6 +22,8 @@ Find the **Dark Mode** button in the top left of the Options menu.
 - **Brightness:** from nearly black to soft grey
 - **HUD:** darken the hotbar too, if you like
 - **Mods to leave alone:** keep any mod's screens as they are
+
+![The Midnight theme](https://wiki.mycelium-gg.org/darkmode/img/midnight.png)
 
 ## Good to know
 
