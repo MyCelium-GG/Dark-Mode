@@ -41,3 +41,27 @@ loom {
     }
 }
 
+// FastStats, on lines that set faststats_version (see gradle.properties). The SDK jar for this exact
+// Minecraft version is embedded; lines without it compile a no-op Stats class instead.
+repositories {
+    maven {
+        name = 'FastStats'
+        url = uri('https://repo.faststats.dev/releases')
+        content {
+            includeGroup('dev.faststats.metrics')
+        }
+    }
+}
+def fastStats = (findProperty('faststats_version') ?: '').toString().trim()
+if (fastStats) {
+    sourceSets.main.java.srcDir(project(':common').file('src/faststats/java'))
+    sourceSets.main.java.srcDir('src/faststats/java')
+} else {
+    sourceSets.main.java.srcDir('src/nofaststats/java')
+}
+if (fastStats) {
+    dependencies {
+        implementation "dev.faststats.metrics:fabric:${fastStats}+mc${minecraft_version}"
+        include "dev.faststats.metrics:fabric:${fastStats}+mc${minecraft_version}"
+    }
+}

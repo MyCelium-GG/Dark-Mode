@@ -41,17 +41,25 @@ public final class Darkness {
 
     /** Standalone screen textures. */
     public static void textureLoaded(Identifier location, NativeImage image) {
-        if (DarkModeMod.isModEnabled() && ScreenPaths.isScreenTexture(location.getNamespace(), location.getPath(),
-                DarkModeMod.modScreens.get(), skipped())) {
-            recolor(image);
+        try {
+            if (DarkModeMod.isModEnabled() && ScreenPaths.isScreenTexture(location.getNamespace(), location.getPath(),
+                    DarkModeMod.modScreens.get(), skipped())) {
+                recolor(image);
+            }
+        } catch (RuntimeException e) {
+            Failures.report("texture " + location, e);
         }
     }
 
     /** Sprites of the gui atlas. */
     public static void spriteLoaded(Identifier name, NativeImage image) {
-        if (DarkModeMod.isModEnabled() && ScreenPaths.isScreenSprite(name.getNamespace(), name.getPath(),
-                DarkModeMod.modScreens.get(), DarkModeMod.hud.get(), skipped())) {
-            recolor(image);
+        try {
+            if (DarkModeMod.isModEnabled() && ScreenPaths.isScreenSprite(name.getNamespace(), name.getPath(),
+                    DarkModeMod.modScreens.get(), DarkModeMod.hud.get(), skipped())) {
+                recolor(image);
+            }
+        } catch (RuntimeException e) {
+            Failures.report("sprite " + name, e);
         }
     }
 

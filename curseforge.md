@@ -32,3 +32,4 @@ Find the **Dark Mode** button in the top left of the Options menu.
 - Fabric, Forge and NeoForge, Minecraft 26.1 to 26.3
 - On Forge and NeoForge, the first loading window is still red the very first time you start. It's black from the next start on.
 - If a screen from another mod looks wrong, add that mod under **Mods to leave alone**
+- Optional anonymous stats and error reports (FastStats, Minecraft 26.2 and 26.3): nothing is sent unless you agree on the screen at first start. [What is sent](https://wiki.mycelium-gg.org/privacy#mod-stats)

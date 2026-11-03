@@ -7,5 +7,6 @@ public final class DarkModeFabric implements ModInitializer {
     @Override
     public void onInitialize() {
         DarkModeMod.init();
+        Stats.start();
     }
 }

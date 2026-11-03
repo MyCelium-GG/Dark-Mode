@@ -1,6 +1,7 @@
 plugins {
     id 'modloader-loader'
     id 'net.minecraftforge.gradle' version '[7.0.17,8)'
+    id 'net.minecraftforge.jarjar' version '0.2.3'
 }
 
 description = rootProject.description
@@ -43,5 +44,41 @@ minecraft {
 tasks.named('jar') {
     manifest {
         attributes 'MixinConfigs': 'darkmode.mixins.json'
+    }
+}
+
+// FastStats, on lines that set faststats_version (see gradle.properties). The SDK jar for this exact
+// Minecraft version is embedded; lines without it compile a no-op Stats class instead.
+repositories {
+    maven {
+        name = 'FastStats'
+        url = uri('https://repo.faststats.dev/releases')
+        content {
+            includeGroup('dev.faststats.metrics')
+        }
+    }
+}
+def fastStats = (findProperty('faststats_version') ?: '').toString().trim()
+if (fastStats) {
+    sourceSets.main.java.srcDir(project(':common').file('src/faststats/java'))
+    sourceSets.main.java.srcDir('src/faststats/java')
+} else {
+    sourceSets.main.java.srcDir('src/nofaststats/java')
+}
+if (fastStats) {
+    jarJar.register()
+    dependencies {
+        implementation(jarJar("dev.faststats.metrics:forge:${fastStats}+mc${minecraft_version}"))
+    }
+    // The jar-in-jar task's output is the real mod jar, so it takes the plain name the release
+    // uploads; the jar without the embedded SDK moves out of build/libs.
+    tasks.named('jar') {
+        destinationDirectory = layout.buildDirectory.dir('jar-without-jarjar')
+    }
+    tasks.named('jarJar') {
+        archiveClassifier = ''
+    }
+    tasks.named('assemble') {
+        dependsOn 'jarJar'
     }
 }

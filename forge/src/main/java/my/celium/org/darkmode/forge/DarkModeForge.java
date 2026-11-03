@@ -16,6 +16,7 @@ public final class DarkModeForge {
         DarkModeMod.init();
         if (FMLEnvironment.dist == Dist.CLIENT) {
             ClientDarkMode.register();
+            Stats.start();
         }
     }
 }
