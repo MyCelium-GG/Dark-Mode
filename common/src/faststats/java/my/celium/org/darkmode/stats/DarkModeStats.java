@@ -16,7 +16,7 @@ import my.celium.org.darkmode.client.Failures;
  */
 public final class DarkModeStats {
     /** Project token from faststats.dev. Empty means FastStats stays off. */
-    public static final String TOKEN = "";
+    public static final String TOKEN = "178e7af2f7a3d6f8743a2e158190e8a6";
 
     private static final String OWN_PACKAGE = "my.celium.org.darkmode.";
 
