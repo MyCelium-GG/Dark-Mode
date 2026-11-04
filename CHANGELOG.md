@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.0.2] - 2026-11-04
+
+### Changed
+- Built for Mycel 1.6.0: chat messages get the new MyCelium look, and Mycel can share anonymous stats if you agree. What is sent: https://wiki.mycelium-gg.org/privacy#mycel-stats
+
 ## [1.0.1] - 2026-11-03
 
 ### Changed
