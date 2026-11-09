@@ -13,6 +13,8 @@
   <a href="https://github.com/MyCelium-GG/Dark-Mode/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-F2C14E?style=flat-square" alt="License"></a>
 </p>
 
+<a href="https://www.curseforge.com/minecraft/mc-mods/mycel"><img src="https://raw.githubusercontent.com/MyCelium-GG/Dark-Mode/67132fcb6205/docs/img/banners/mycel-required.svg" alt="Mycel is required: this mod needs the Mycel library to run. Install Mycel next to it, for the same Minecraft version and loader. Download it from CurseForge." width="100%"></a>
+
 ![About the mod](https://raw.githubusercontent.com/MyCelium-GG/Dark-Mode/49ee4fbc9839/docs/img/banners/about-the-mod.svg)
 
 <img src="https://raw.githubusercontent.com/MyCelium-GG/Dark-Mode/49ee4fbc9839/docs/img/banners/about.svg" alt="Dark Mode Turns every screen in Minecraft dark, including the Mojang loading screen and screens from other mods. Requires Mycel. Fabric, Forge and NeoForge, Minecraft 26.1 to 26.3." width="100%">
