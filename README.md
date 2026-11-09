@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/badge/Java-25-E76F00?style=flat-square&logo=openjdk&logoColor=white" alt="Java 25">
   <a href="https://www.curseforge.com/minecraft/mc-mods/mycel"><img src="https://img.shields.io/badge/requires-Mycel-F16436?style=flat-square&logo=curseforge&logoColor=white" alt="Requires Mycel"></a>
   <a href="https://wiki.mycelium-gg.org/darkmode/"><img src="https://img.shields.io/badge/docs-wiki-0A7BBB?style=flat-square" alt="Docs on the wiki"></a>
-  <a href="https://github.com/MyCelium-GG/Dark-Mode/blob/main/LICENSE"><img src="https://img.shields.io/github/license/MyCelium-GG/Dark-Mode?style=flat-square&color=F2C14E" alt="License"></a>
+  <a href="https://github.com/MyCelium-GG/Dark-Mode/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-F2C14E?style=flat-square" alt="License"></a>
 </p>
 
 ![About the mod](https://raw.githubusercontent.com/MyCelium-GG/Dark-Mode/49ee4fbc9839/docs/img/banners/about-the-mod.svg)
