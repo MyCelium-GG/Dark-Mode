@@ -5,7 +5,7 @@
 The winter update.
 
 ### Added
-- Christmas loading screen: a pixel-art winter night behind the Mojang logo, with northern lights, a moon, snowy mountains, a village by a frozen lake, a Christmas tree, a snowman, falling snow and a sleigh that crosses the sky now and then.
+- Christmas loading screen: a snowy clearing at sunset behind the Mojang logo, with a lit Christmas tree and presents, a log cabin with a smoking chimney, snowmen, lanterns, a frozen pond and snowy mountains. Built in Minecraft, turned into pixel art, with light snow falling over it.
 - Your own loading screen: drag a PNG onto the Dark Mode settings screen (or put it in `config/darkmode/loading.png`) and pick "Your image". It fills the window like a wallpaper.
 - Winter theme: icy blue dark screens with snow gently falling behind every menu.
 

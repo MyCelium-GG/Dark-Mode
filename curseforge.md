@@ -8,7 +8,7 @@ Screens from other mods go dark too, so you don't need a separate resource pack 
 
 ## Winter update
 
-- **Christmas loading screen:** a pixel-art winter night behind the Mojang logo, with northern lights, a village by a frozen lake, a Christmas tree, a snowman and a sleigh crossing the sky
+- **Christmas loading screen:** a snowy clearing at sunset behind the Mojang logo, with a lit Christmas tree, a log cabin, snowmen, a frozen pond and snowy mountains, built in Minecraft and turned into pixel art
 - **Your own loading screen:** drag any PNG onto the Dark Mode settings screen and it becomes your loading screen
 - **Winter theme:** icy blue screens with snow falling behind every menu
 
