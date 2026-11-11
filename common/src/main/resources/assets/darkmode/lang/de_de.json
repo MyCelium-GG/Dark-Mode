@@ -4,11 +4,11 @@
   "darkmode.settings.enabled": "Dunkler Modus",
   "darkmode.settings.enabled.tip": "Dunkle Menüs ein- oder ausschalten.",
   "darkmode.settings.theme": "Design",
-  "darkmode.settings.theme.tip": "Die Färbung dunkler Menüs.",
+  "darkmode.settings.theme.tip": "Der Farbton dunkler Bildschirme. Winter lässt außerdem Schnee hinter Menüs fallen.",
   "darkmode.settings.brightness": "Helligkeit",
   "darkmode.settings.brightness.tip": "Wie hell dunkle Menüs sind. Niedriger ist dunkler.",
   "darkmode.settings.loading": "Ladebildschirm",
-  "darkmode.settings.loading.tip": "Farbe des Mojang-Ladebildschirms.",
+  "darkmode.settings.loading.tip": "Was der Mojang-Ladebildschirm zeigt: eine Farbe, eine Weihnachtslandschaft oder dein eigenes Bild.",
   "darkmode.settings.mods": "Mod-Menüs",
   "darkmode.settings.mods.tip": "Auch Menüs anderer Mods abdunkeln.",
   "darkmode.settings.hud": "HUD",
@@ -28,5 +28,13 @@
   "darkmode.loading.charcoal": "Anthrazit",
   "darkmode.loading.midnight": "Mitternacht",
   "darkmode.loading.plum": "Pflaume",
-  "darkmode.loading.red": "Rot"
+  "darkmode.loading.red": "Rot",
+  "darkmode.loading.christmas": "Weihnachten",
+  "darkmode.loading.custom": "Dein Bild",
+  "darkmode.theme.winter": "Winter",
+  "darkmode.settings.image": "Ordner für Ladebild öffnen",
+  "darkmode.settings.image.tip": "Zieh ein PNG auf diesen Bildschirm, dann wird es dein Ladebildschirm. Oder leg es als loading.png in config/darkmode und wähle \"Dein Bild\".",
+  "darkmode.settings.image.done": "Bild gespeichert. Der Ladebildschirm zeigt es jetzt.",
+  "darkmode.settings.image.bad": "Das ist kein PNG-Bild, das Dark Mode lesen kann.",
+  "darkmode.settings.image.drop": "Oder zieh ein PNG auf diesen Bildschirm, um es als Ladebildschirm zu nutzen."
 }

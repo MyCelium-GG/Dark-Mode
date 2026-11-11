@@ -4,11 +4,11 @@
   "darkmode.settings.enabled": "深色模式",
   "darkmode.settings.enabled.tip": "开启或关闭深色界面。",
   "darkmode.settings.theme": "主题",
-  "darkmode.settings.theme.tip": "深色界面的色调。",
+  "darkmode.settings.theme.tip": "深色界面的色调。冬季还会让菜单后面飘雪。",
   "darkmode.settings.brightness": "亮度",
   "darkmode.settings.brightness.tip": "深色界面的亮度,越低越暗。",
   "darkmode.settings.loading": "加载界面",
-  "darkmode.settings.loading.tip": "Mojang 加载界面的颜色。",
+  "darkmode.settings.loading.tip": "Mojang 加载界面显示的内容：纯色、圣诞风景或你自己的图片。",
   "darkmode.settings.mods": "模组界面",
   "darkmode.settings.mods.tip": "同时调暗其他模组的界面。",
   "darkmode.settings.hud": "HUD",
@@ -28,5 +28,13 @@
   "darkmode.loading.charcoal": "炭灰",
   "darkmode.loading.midnight": "午夜",
   "darkmode.loading.plum": "梅紫",
-  "darkmode.loading.red": "红色"
+  "darkmode.loading.red": "红色",
+  "darkmode.loading.christmas": "圣诞",
+  "darkmode.loading.custom": "你的图片",
+  "darkmode.theme.winter": "冬季",
+  "darkmode.settings.image": "打开加载图片文件夹",
+  "darkmode.settings.image.tip": "把 PNG 拖到此界面，它就会成为你的加载界面。也可以把它放进 config/darkmode 并命名为 loading.png，然后选择“你的图片”。",
+  "darkmode.settings.image.done": "图片已保存，加载界面现在会显示它。",
+  "darkmode.settings.image.bad": "这不是 Dark Mode 能读取的 PNG 图片。",
+  "darkmode.settings.image.drop": "或者把 PNG 拖到此界面，将其设为加载界面。"
 }

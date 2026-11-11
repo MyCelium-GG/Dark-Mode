@@ -1,5 +1,6 @@
 package my.celium.org.darkmode.mixin;
 
+import my.celium.org.darkmode.DarkGate;
 import my.celium.org.darkmode.client.Darkness;
 import net.minecraft.client.renderer.texture.TextureContents;
 import net.minecraft.resources.Identifier;
@@ -14,6 +15,8 @@ abstract class TextureContentsMixin {
     @Inject(method = "load", at = @At("RETURN"))
     private static void darkmode$recolor(ResourceManager manager, Identifier location,
             CallbackInfoReturnable<TextureContents> result) {
-        Darkness.textureLoaded(location, result.getReturnValue().image());
+        if (DarkGate.active()) {
+            Darkness.textureLoaded(location, result.getReturnValue().image());
+        }
     }
 }

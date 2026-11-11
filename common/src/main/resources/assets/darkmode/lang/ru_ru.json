@@ -4,11 +4,11 @@
   "darkmode.settings.enabled": "Тёмный режим",
   "darkmode.settings.enabled.tip": "Включить или выключить тёмные экраны.",
   "darkmode.settings.theme": "Тема",
-  "darkmode.settings.theme.tip": "Оттенок тёмных экранов.",
+  "darkmode.settings.theme.tip": "Оттенок тёмных экранов. Зима также добавляет снегопад за меню.",
   "darkmode.settings.brightness": "Яркость",
   "darkmode.settings.brightness.tip": "Яркость тёмных экранов. Меньше значит темнее.",
   "darkmode.settings.loading": "Экран загрузки",
-  "darkmode.settings.loading.tip": "Цвет экрана загрузки Mojang.",
+  "darkmode.settings.loading.tip": "Что показывает экран загрузки Mojang: цвет, рождественский пейзаж или твоё изображение.",
   "darkmode.settings.mods": "Экраны модов",
   "darkmode.settings.mods.tip": "Затемнять и экраны других модов.",
   "darkmode.settings.hud": "Интерфейс",
@@ -28,5 +28,13 @@
   "darkmode.loading.charcoal": "Графит",
   "darkmode.loading.midnight": "Полночь",
   "darkmode.loading.plum": "Слива",
-  "darkmode.loading.red": "Красный"
+  "darkmode.loading.red": "Красный",
+  "darkmode.loading.christmas": "Рождество",
+  "darkmode.loading.custom": "Твоё изображение",
+  "darkmode.theme.winter": "Зима",
+  "darkmode.settings.image": "Открыть папку изображения",
+  "darkmode.settings.image.tip": "Перетащи PNG на этот экран, и он станет экраном загрузки. Или положи его в config/darkmode как loading.png и выбери \"Твоё изображение\".",
+  "darkmode.settings.image.done": "Изображение сохранено. Экран загрузки теперь показывает его.",
+  "darkmode.settings.image.bad": "Это не PNG-изображение, которое Dark Mode может прочитать.",
+  "darkmode.settings.image.drop": "Или перетащи PNG на этот экран, чтобы сделать его экраном загрузки."
 }

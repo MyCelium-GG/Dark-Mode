@@ -1,5 +1,6 @@
 package my.celium.org.darkmode.mixin;
 
+import my.celium.org.darkmode.DarkGate;
 import my.celium.org.darkmode.client.DarkModeScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.Screen;
@@ -19,6 +20,9 @@ abstract class OptionsScreenMixin extends Screen {
 
     @Inject(method = "init", at = @At("TAIL"))
     private void darkmode$addButton(CallbackInfo info) {
+        if (!DarkGate.active()) {
+            return;
+        }
         addRenderableWidget(Button.builder(Component.translatable("darkmode.settings.title"),
                 button -> this.minecraft.setScreenAndShow(new DarkModeScreen(this))).bounds(6, 6, 80, 20).build());
     }

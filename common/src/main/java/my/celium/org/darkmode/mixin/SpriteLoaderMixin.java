@@ -1,5 +1,6 @@
 package my.celium.org.darkmode.mixin;
 
+import my.celium.org.darkmode.DarkGate;
 import java.util.List;
 import java.util.concurrent.Executor;
 import my.celium.org.darkmode.client.Darkness;
@@ -22,7 +23,7 @@ abstract class SpriteLoaderMixin {
     @Inject(method = "stitch", at = @At("HEAD"))
     private void darkmode$recolor(List<SpriteContents> sprites, int mipLevels, Executor executor,
             CallbackInfoReturnable<SpriteLoader.Preparations> result) {
-        if (Darkness.isGuiAtlas(location)) {
+        if (DarkGate.active() && Darkness.isGuiAtlas(location)) {
             for (SpriteContents sprite : sprites) {
                 Darkness.spriteLoaded(sprite.name(), ((SpriteContentsAccessor) sprite).darkmode$image());
             }

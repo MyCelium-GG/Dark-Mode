@@ -1,5 +1,6 @@
 package my.celium.org.darkmode.mixin;
 
+import my.celium.org.darkmode.DarkGate;
 import my.celium.org.darkmode.client.Darkness;
 import net.minecraft.client.renderer.state.gui.GuiTextRenderState;
 import net.minecraft.util.FormattedCharSequence;
@@ -12,11 +13,11 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 abstract class GuiTextRenderStateMixin {
     @ModifyVariable(method = "<init>", at = @At("HEAD"), argsOnly = true, ordinal = 2)
     private static int darkmode$color(int color) {
-        return Darkness.text(color);
+        return DarkGate.active() ? Darkness.text(color) : color;
     }
 
     @ModifyVariable(method = "<init>", at = @At("HEAD"), argsOnly = true)
     private static FormattedCharSequence darkmode$styles(FormattedCharSequence text) {
-        return Darkness.text(text);
+        return DarkGate.active() ? Darkness.text(text) : text;
     }
 }

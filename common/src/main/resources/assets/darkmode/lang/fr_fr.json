@@ -4,11 +4,11 @@
   "darkmode.settings.enabled": "Mode sombre",
   "darkmode.settings.enabled.tip": "Active ou désactive les écrans sombres.",
   "darkmode.settings.theme": "Thème",
-  "darkmode.settings.theme.tip": "La teinte des écrans sombres.",
+  "darkmode.settings.theme.tip": "La teinte des écrans sombres. Hiver fait aussi tomber la neige derrière les menus.",
   "darkmode.settings.brightness": "Luminosité",
   "darkmode.settings.brightness.tip": "La luminosité des écrans sombres. Plus bas est plus sombre.",
   "darkmode.settings.loading": "Écran de chargement",
-  "darkmode.settings.loading.tip": "Couleur de l'écran de chargement de Mojang.",
+  "darkmode.settings.loading.tip": "Ce que montre l'écran de chargement de Mojang : une couleur, un paysage de Noël ou ta propre image.",
   "darkmode.settings.mods": "Écrans des mods",
   "darkmode.settings.mods.tip": "Assombrit aussi les écrans des autres mods.",
   "darkmode.settings.hud": "ATH",
@@ -28,5 +28,13 @@
   "darkmode.loading.charcoal": "Anthracite",
   "darkmode.loading.midnight": "Minuit",
   "darkmode.loading.plum": "Prune",
-  "darkmode.loading.red": "Rouge"
+  "darkmode.loading.red": "Rouge",
+  "darkmode.loading.christmas": "Noël",
+  "darkmode.loading.custom": "Ton image",
+  "darkmode.theme.winter": "Hiver",
+  "darkmode.settings.image": "Ouvrir le dossier de l'image",
+  "darkmode.settings.image.tip": "Dépose un PNG sur cet écran et il devient ton écran de chargement. Ou place-le dans config/darkmode sous le nom loading.png et choisis \"Ton image\".",
+  "darkmode.settings.image.done": "Image enregistrée. L'écran de chargement l'affiche maintenant.",
+  "darkmode.settings.image.bad": "Ce n'est pas une image PNG que Dark Mode peut lire.",
+  "darkmode.settings.image.drop": "Ou glisse un PNG sur cet écran pour en faire ton écran de chargement."
 }

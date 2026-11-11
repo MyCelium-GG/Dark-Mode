@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0] - 2026-11-11
+
+The winter update.
+
+### Added
+- Christmas loading screen: a pixel-art winter night behind the Mojang logo, with northern lights, a moon, snowy mountains, a village by a frozen lake, a Christmas tree, a snowman, falling snow and a sleigh that crosses the sky now and then.
+- Your own loading screen: drag a PNG onto the Dark Mode settings screen (or put it in `config/darkmode/loading.png`) and pick "Your image". It fills the window like a wallpaper.
+- Winter theme: icy blue dark screens with snow gently falling behind every menu.
+
+### Changed
+- Installed without Mycel, the game no longer refuses to start. Dark Mode stays off and tells you in chat that Mycel is missing, with a download link. An outdated Mycel is still reported by the loader.
+
 ## [1.0.2] - 2026-11-04
 
 ### Changed

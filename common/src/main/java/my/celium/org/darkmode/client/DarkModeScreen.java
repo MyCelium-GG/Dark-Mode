@@ -1,5 +1,7 @@
 package my.celium.org.darkmode.client;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
@@ -27,6 +29,8 @@ public final class DarkModeScreen extends Screen {
 
     private final Screen parent;
     private EditBox skipped;
+    /** What happened to the last image dropped onto this screen, shown at the bottom. */
+    private Component dropStatus;
 
     public DarkModeScreen(Screen parent) {
         super(Component.translatable("darkmode.settings.title"));
@@ -57,6 +61,10 @@ public final class DarkModeScreen extends Screen {
         skipped.setValue(String.join(", ", DarkModeMod.skippedMods.get()));
         skipped.setTooltip(Tooltip.create(Component.translatable("darkmode.settings.skipped.tip")));
         addRenderableWidget(skipped);
+
+        int imageRow = top + ROW * 5 + 14;
+        addRenderableWidget(Button.builder(Component.translatable("darkmode.settings.image"), button -> openImageFolder())
+                .bounds(left, imageRow, COLUMN * 2 + GAP, 20).tooltip(tip("image")).build());
 
         addRenderableWidget(Button.builder(CommonComponents.GUI_DONE, button -> onClose())
                 .bounds(this.width / 2 - 100, this.height - 26, 200, 20).build());
@@ -94,8 +102,40 @@ public final class DarkModeScreen extends Screen {
     public void extractRenderState(GuiGraphicsExtractor graphics, int mouseX, int mouseY, float partialTick) {
         super.extractRenderState(graphics, mouseX, mouseY, partialTick);
         graphics.centeredText(this.font, this.title, this.width / 2, 12, TEXT);
-        graphics.centeredText(this.font, Component.translatable("darkmode.settings.hint"), this.width / 2,
-                this.height - 40, HINT);
+        graphics.centeredText(this.font, Component.translatable("darkmode.settings.image.drop"), this.width / 2,
+                30 + ROW * 5 + 14 + 26, HINT);
+        graphics.centeredText(this.font, dropStatus != null ? dropStatus : Component.translatable("darkmode.settings.hint"),
+                this.width / 2, this.height - 40, HINT);
+    }
+
+    /** An image dropped onto this screen becomes the loading screen. */
+    @Override
+    public void onFilesDrop(List<Path> files) {
+        for (Path file : files) {
+            if (CustomLoading.importImage(file)) {
+                DarkModeMod.loadingScreen.set(LoadingColor.CUSTOM.name());
+                dropStatus = Component.translatable("darkmode.settings.image.done");
+                rebuildWidgets();
+                return;
+            }
+        }
+        dropStatus = Component.translatable("darkmode.settings.image.bad");
+    }
+
+    /** Opens config/darkmode, where loading.png goes. The call moved between Minecraft versions. */
+    private static void openImageFolder() {
+        Path folder = CustomLoading.file().getParent();
+        try {
+            Files.createDirectories(folder);
+            try {
+                Class.forName("com.mojang.blaze3d.Blaze3D").getMethod("openPath", Path.class).invoke(null, folder);
+            } catch (NoSuchMethodException e) {
+                Object os = Class.forName("net.minecraft.util.Util").getMethod("getPlatform").invoke(null);
+                os.getClass().getMethod("openPath", Path.class).invoke(os, folder);
+            }
+        } catch (ReflectiveOperationException | java.io.IOException | RuntimeException e) {
+            Failures.report("open " + folder, e);
+        }
     }
 
     @Override

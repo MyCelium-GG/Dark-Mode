@@ -4,11 +4,11 @@
   "darkmode.settings.enabled": "Modo oscuro",
   "darkmode.settings.enabled.tip": "Activa o desactiva las pantallas oscuras.",
   "darkmode.settings.theme": "Tema",
-  "darkmode.settings.theme.tip": "El tono de las pantallas oscuras.",
+  "darkmode.settings.theme.tip": "El tono de las pantallas oscuras. Invierno además hace caer nieve detrás de los menús.",
   "darkmode.settings.brightness": "Brillo",
   "darkmode.settings.brightness.tip": "El brillo de las pantallas oscuras. Menos es más oscuro.",
   "darkmode.settings.loading": "Pantalla de carga",
-  "darkmode.settings.loading.tip": "Color de la pantalla de carga de Mojang.",
+  "darkmode.settings.loading.tip": "Lo que muestra la pantalla de carga de Mojang: un color, un paisaje navideño o tu propia imagen.",
   "darkmode.settings.mods": "Pantallas de mods",
   "darkmode.settings.mods.tip": "Oscurece también las pantallas de otros mods.",
   "darkmode.settings.hud": "HUD",
@@ -28,5 +28,13 @@
   "darkmode.loading.charcoal": "Carbón",
   "darkmode.loading.midnight": "Medianoche",
   "darkmode.loading.plum": "Ciruela",
-  "darkmode.loading.red": "Rojo"
+  "darkmode.loading.red": "Rojo",
+  "darkmode.loading.christmas": "Navidad",
+  "darkmode.loading.custom": "Tu imagen",
+  "darkmode.theme.winter": "Invierno",
+  "darkmode.settings.image": "Abrir carpeta de imagen de carga",
+  "darkmode.settings.image.tip": "Suelta un PNG en esta pantalla y será tu pantalla de carga. O ponlo en config/darkmode como loading.png y elige \"Tu imagen\".",
+  "darkmode.settings.image.done": "Imagen guardada. La pantalla de carga ya la muestra.",
+  "darkmode.settings.image.bad": "Eso no es una imagen PNG que Dark Mode pueda leer.",
+  "darkmode.settings.image.drop": "O arrastra un PNG a esta pantalla para usarlo como pantalla de carga."
 }

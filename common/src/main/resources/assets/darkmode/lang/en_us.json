@@ -4,11 +4,11 @@
   "darkmode.settings.enabled": "Dark Mode",
   "darkmode.settings.enabled.tip": "Turn dark screens on or off.",
   "darkmode.settings.theme": "Theme",
-  "darkmode.settings.theme.tip": "The tint of dark screens.",
+  "darkmode.settings.theme.tip": "The tint of dark screens. Winter also lets snow fall behind menus.",
   "darkmode.settings.brightness": "Brightness",
   "darkmode.settings.brightness.tip": "How bright dark screens are. Lower is darker.",
   "darkmode.settings.loading": "Loading screen",
-  "darkmode.settings.loading.tip": "Color of the Mojang loading screen.",
+  "darkmode.settings.loading.tip": "What the Mojang loading screen shows: a color, a Christmas landscape, or your own image.",
   "darkmode.settings.mods": "Mod screens",
   "darkmode.settings.mods.tip": "Also darken screens from other mods.",
   "darkmode.settings.hud": "HUD",
@@ -28,5 +28,13 @@
   "darkmode.loading.charcoal": "Charcoal",
   "darkmode.loading.midnight": "Midnight",
   "darkmode.loading.plum": "Plum",
-  "darkmode.loading.red": "Red"
+  "darkmode.loading.red": "Red",
+  "darkmode.loading.christmas": "Christmas",
+  "darkmode.loading.custom": "Your image",
+  "darkmode.theme.winter": "Winter",
+  "darkmode.settings.image": "Open loading image folder",
+  "darkmode.settings.image.tip": "Drop a PNG onto this screen and it becomes your loading screen. Or put it in config/darkmode as loading.png and pick \"Your image\".",
+  "darkmode.settings.image.done": "Image saved. The loading screen now shows it.",
+  "darkmode.settings.image.bad": "That is not a PNG image Dark Mode can read.",
+  "darkmode.settings.image.drop": "Or drag a PNG onto this screen to use it as your loading screen."
 }

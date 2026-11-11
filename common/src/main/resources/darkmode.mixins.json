@@ -9,6 +9,7 @@
     "LoadingOverlayMixin",
     "MinecraftMixin",
     "OptionsScreenMixin",
+    "ScreenMixin",
     "SpriteContentsAccessor",
     "SpriteLoaderMixin",
     "TextureContentsMixin"

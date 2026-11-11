@@ -20,7 +20,7 @@ import my.celium.org.metadata.ModMetadata;
 public final class DarkModeMod {
     public static final String ID = "darkmode";
 
-    public static final ModMetadata META = ModMetadata.builder(ID, "Dark Mode", "1.0.2")
+    public static final ModMetadata META = ModMetadata.builder(ID, "Dark Mode", "1.1.0")
             .author("MyCelium")
             .website("https://www.curseforge.com/minecraft/mc-mods/dark-mode")
             .updateUrl("https://wiki.mycelium-gg.org/updates/darkmode.json")
@@ -40,7 +40,7 @@ public final class DarkModeMod {
     private DarkModeMod() {
     }
 
-    /** Called once from each loader's entrypoint. */
+    /** Called once from each loader's entrypoint, only when Mycel is installed. */
     public static void init() {
         Mycel.initialize();
         Mycel.registerMod(META);
@@ -49,11 +49,11 @@ public final class DarkModeMod {
         enabled = builder.booleanValue("enabled", true,
                 "Turn dark screens on or off.");
         theme = builder.stringValue("theme", Theme.NEUTRAL.name(),
-                "The tint of dark screens: NEUTRAL, MIDNIGHT, FOREST, PLUM or EMBER.");
+                "The tint of dark screens: NEUTRAL, MIDNIGHT, FOREST, PLUM, EMBER or WINTER (snow falls behind menus).");
         brightness = builder.intValue("brightness", 30, 8, 60,
                 "How bright dark screens are, in percent of the normal brightness.");
         loadingScreen = builder.stringValue("loadingScreen", LoadingColor.BLACK.name(),
-                "Mojang loading screen color: BLACK, CHARCOAL, MIDNIGHT, PLUM or RED (normal).");
+                "Mojang loading screen: BLACK, CHARCOAL, MIDNIGHT, PLUM, RED (normal), CHRISTMAS (a winter landscape) or CUSTOM (config/darkmode/loading.png).");
         modScreens = builder.booleanValue("modScreens", true,
                 "Also darken screens from other mods.");
         hud = builder.booleanValue("hud", false,

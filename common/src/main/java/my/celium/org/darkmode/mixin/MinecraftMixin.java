@@ -1,5 +1,7 @@
 package my.celium.org.darkmode.mixin;
 
+import my.celium.org.darkmode.DarkGate;
+import my.celium.org.darkmode.MissingMycel;
 import my.celium.org.darkmode.client.Darkness;
 import net.minecraft.client.Minecraft;
 import org.spongepowered.asm.mixin.Mixin;
@@ -11,6 +13,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 abstract class MinecraftMixin {
     @Inject(method = "tick", at = @At("TAIL"))
     private void darkmode$tick(CallbackInfo info) {
-        Darkness.tick((Minecraft) (Object) this);
+        if (DarkGate.active()) {
+            Darkness.tick((Minecraft) (Object) this);
+        } else if (DarkGate.mycelMissing()) {
+            MissingMycel.tick((Minecraft) (Object) this);
+        }
     }
 }
