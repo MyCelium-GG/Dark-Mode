@@ -36,5 +36,7 @@
   "darkmode.settings.image.tip": "Перетащи PNG на этот экран, и он станет экраном загрузки. Или положи его в config/darkmode как loading.png и выбери \"Твоё изображение\".",
   "darkmode.settings.image.done": "Изображение сохранено. Экран загрузки теперь показывает его.",
   "darkmode.settings.image.bad": "Это не PNG-изображение, которое Dark Mode может прочитать.",
-  "darkmode.settings.image.drop": "Или перетащи PNG на этот экран, чтобы сделать его экраном загрузки."
+  "darkmode.settings.image.drop": "Или перетащи PNG на этот экран, чтобы сделать его экраном загрузки.",
+  "darkmode.missing_mycel": "Mycel не установлен. %s нужна библиотека Mycel, без неё мод не работает.",
+  "darkmode.missing_mycel.download": "[Скачать Mycel]"
 }

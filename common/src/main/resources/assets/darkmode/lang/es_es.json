@@ -36,5 +36,7 @@
   "darkmode.settings.image.tip": "Suelta un PNG en esta pantalla y será tu pantalla de carga. O ponlo en config/darkmode como loading.png y elige \"Tu imagen\".",
   "darkmode.settings.image.done": "Imagen guardada. La pantalla de carga ya la muestra.",
   "darkmode.settings.image.bad": "Eso no es una imagen PNG que Dark Mode pueda leer.",
-  "darkmode.settings.image.drop": "O arrastra un PNG a esta pantalla para usarlo como pantalla de carga."
+  "darkmode.settings.image.drop": "O arrastra un PNG a esta pantalla para usarlo como pantalla de carga.",
+  "darkmode.missing_mycel": "Falta Mycel. %s necesita la biblioteca Mycel para funcionar y seguirá desactivado hasta que la instales.",
+  "darkmode.missing_mycel.download": "[Descargar Mycel]"
 }

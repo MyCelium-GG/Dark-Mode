@@ -36,5 +36,7 @@
   "darkmode.settings.image.tip": "Dépose un PNG sur cet écran et il devient ton écran de chargement. Ou place-le dans config/darkmode sous le nom loading.png et choisis \"Ton image\".",
   "darkmode.settings.image.done": "Image enregistrée. L'écran de chargement l'affiche maintenant.",
   "darkmode.settings.image.bad": "Ce n'est pas une image PNG que Dark Mode peut lire.",
-  "darkmode.settings.image.drop": "Ou glisse un PNG sur cet écran pour en faire ton écran de chargement."
+  "darkmode.settings.image.drop": "Ou glisse un PNG sur cet écran pour en faire ton écran de chargement.",
+  "darkmode.missing_mycel": "Mycel est manquant. %s a besoin de la bibliothèque Mycel et reste désactivé tant qu'elle n'est pas installée.",
+  "darkmode.missing_mycel.download": "[Télécharger Mycel]"
 }

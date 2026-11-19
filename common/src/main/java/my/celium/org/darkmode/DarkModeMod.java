@@ -20,7 +20,7 @@ import my.celium.org.metadata.ModMetadata;
 public final class DarkModeMod {
     public static final String ID = "darkmode";
 
-    public static final ModMetadata META = ModMetadata.builder(ID, "Dark Mode", "1.1.0")
+    public static final ModMetadata META = ModMetadata.builder(ID, "Dark Mode", "1.2.0")
             .author("MyCelium")
             .website("https://www.curseforge.com/minecraft/mc-mods/dark-mode")
             .updateUrl("https://wiki.mycelium-gg.org/updates/darkmode.json")

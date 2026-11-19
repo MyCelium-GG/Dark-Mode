@@ -36,5 +36,7 @@
   "darkmode.settings.image.tip": "把 PNG 拖到此界面，它就会成为你的加载界面。也可以把它放进 config/darkmode 并命名为 loading.png，然后选择“你的图片”。",
   "darkmode.settings.image.done": "图片已保存，加载界面现在会显示它。",
   "darkmode.settings.image.bad": "这不是 Dark Mode 能读取的 PNG 图片。",
-  "darkmode.settings.image.drop": "或者把 PNG 拖到此界面，将其设为加载界面。"
+  "darkmode.settings.image.drop": "或者把 PNG 拖到此界面，将其设为加载界面。",
+  "darkmode.missing_mycel": "缺少 Mycel。%s 需要 Mycel 库才能运行，安装前不会生效。",
+  "darkmode.missing_mycel.download": "[下载 Mycel]"
 }

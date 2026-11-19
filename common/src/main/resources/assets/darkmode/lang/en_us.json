@@ -36,5 +36,7 @@
   "darkmode.settings.image.tip": "Drop a PNG onto this screen and it becomes your loading screen. Or put it in config/darkmode as loading.png and pick \"Your image\".",
   "darkmode.settings.image.done": "Image saved. The loading screen now shows it.",
   "darkmode.settings.image.bad": "That is not a PNG image Dark Mode can read.",
-  "darkmode.settings.image.drop": "Or drag a PNG onto this screen to use it as your loading screen."
+  "darkmode.settings.image.drop": "Or drag a PNG onto this screen to use it as your loading screen.",
+  "darkmode.missing_mycel": "Mycel is missing. %s needs the Mycel library to work and stays off until it is installed.",
+  "darkmode.missing_mycel.download": "[Download Mycel]"
 }

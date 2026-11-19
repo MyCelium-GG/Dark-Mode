@@ -41,3 +41,4 @@ Find the **Dark Mode** button in the top left of the Options menu.
 - On Forge and NeoForge, the very first loading window comes from the loader before any mod runs, so it stays plain. The Christmas scene and your own image show on every loading screen after that.
 - If a screen from another mod looks wrong, add that mod under **Mods to leave alone**
 - Optional anonymous stats and error reports (FastStats, Minecraft 26.2 and 26.3): nothing is sent unless you agree on the screen at first start. [What is sent](https://wiki.mycelium-gg.org/privacy#mod-stats)
+- In 11 languages: English, German, Spanish, French, Dutch, Brazilian Portuguese, Russian, Polish, Italian, Japanese and Simplified Chinese

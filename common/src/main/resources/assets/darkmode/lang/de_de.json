@@ -36,5 +36,7 @@
   "darkmode.settings.image.tip": "Zieh ein PNG auf diesen Bildschirm, dann wird es dein Ladebildschirm. Oder leg es als loading.png in config/darkmode und wähle \"Dein Bild\".",
   "darkmode.settings.image.done": "Bild gespeichert. Der Ladebildschirm zeigt es jetzt.",
   "darkmode.settings.image.bad": "Das ist kein PNG-Bild, das Dark Mode lesen kann.",
-  "darkmode.settings.image.drop": "Oder zieh ein PNG auf diesen Bildschirm, um es als Ladebildschirm zu nutzen."
+  "darkmode.settings.image.drop": "Oder zieh ein PNG auf diesen Bildschirm, um es als Ladebildschirm zu nutzen.",
+  "darkmode.missing_mycel": "Mycel fehlt. %s braucht die Mycel-Bibliothek und bleibt aus, bis sie installiert ist.",
+  "darkmode.missing_mycel.download": "[Mycel herunterladen]"
 }
