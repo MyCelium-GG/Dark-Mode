@@ -20,7 +20,7 @@ import my.celium.org.metadata.ModMetadata;
 public final class DarkModeMod {
     public static final String ID = "darkmode";
 
-    public static final ModMetadata META = ModMetadata.builder(ID, "Dark Mode", "1.2.0")
+    public static final ModMetadata META = ModMetadata.builder(ID, "Dark Mode", "1.3.0")
             .author("MyCelium")
             .website("https://www.curseforge.com/minecraft/mc-mods/dark-mode")
             .updateUrl("https://wiki.mycelium-gg.org/updates/darkmode.json")
@@ -53,7 +53,7 @@ public final class DarkModeMod {
         brightness = builder.intValue("brightness", 30, 8, 60,
                 "How bright dark screens are, in percent of the normal brightness.");
         loadingScreen = builder.stringValue("loadingScreen", LoadingColor.BLACK.name(),
-                "Mojang loading screen: BLACK, CHARCOAL, MIDNIGHT, PLUM, RED (normal), CHRISTMAS (a winter landscape) or CUSTOM (config/darkmode/loading.png).");
+                "Mojang loading screen: BLACK, CHARCOAL, MIDNIGHT, PLUM, RED (normal), CHRISTMAS_VILLAGE, CHRISTMAS_GIFTS, CHRISTMAS (the legacy pixel-art scene) or CUSTOM (config/darkmode/loading.png).");
         modScreens = builder.booleanValue("modScreens", true,
                 "Also darken screens from other mods.");
         hud = builder.booleanValue("hud", false,

@@ -20,10 +20,9 @@ public final class LoadingScenes {
         int height = gfx.guiHeight();
         try {
             return switch (DarkModeMod.loadingColor()) {
-                case CHRISTMAS -> {
-                    WinterLoading.draw(gfx, width, height, alpha);
-                    yield true;
-                }
+                case CHRISTMAS_VILLAGE -> winter(gfx, WinterLoading.Scene.VILLAGE, width, height, alpha);
+                case CHRISTMAS_GIFTS -> winter(gfx, WinterLoading.Scene.GIFTS, width, height, alpha);
+                case CHRISTMAS -> winter(gfx, WinterLoading.Scene.LEGACY, width, height, alpha);
                 case CUSTOM -> CustomLoading.draw(gfx, width, height, alpha);
                 default -> false;
             };
@@ -31,5 +30,10 @@ public final class LoadingScenes {
             Failures.report("loading screen", e);
             return false;
         }
+    }
+
+    private static boolean winter(GuiGraphicsExtractor gfx, WinterLoading.Scene scene, int width, int height, float alpha) {
+        WinterLoading.draw(gfx, scene, width, height, alpha);
+        return true;
     }
 }

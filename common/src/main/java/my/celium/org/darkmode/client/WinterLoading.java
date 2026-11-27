@@ -4,42 +4,63 @@ import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.resources.Identifier;
 
 /**
- * The Christmas loading screen: a winter scene built in Minecraft (a decorated tree with presents,
- * a log cabin with smoke, snow golems, lanterns and a frozen pond at sunset), photographed, turned
- * into 480 x 270 pixel art and colour graded for a winter night. It fills the window like a
- * wallpaper with sharp pixels, and a light snowfall drifts over it. The Mojang logo sits in the
- * sky and the progress bar on the frozen pond. Client only.
+ * The Christmas loading screens: winter scenes built in Minecraft and photographed. Each fills the
+ * window like a wallpaper and a light snowfall drifts over it. Client only.
  */
 final class WinterLoading {
-    /** The top of the picture's night sky; the plain background behind it uses it too. */
+    /** The top of the legacy picture's night sky; the plain background behind every scene uses it. */
     static final int SKY_TOP = 0xFF141433;
 
-    private static final Identifier PICTURE = Identifier.fromNamespaceAndPath("darkmode", "textures/loading/christmas.png");
-    private static final int PICTURE_W = 480;
-    private static final int PICTURE_H = 270;
+    /** One picture, its size in pixels, and how much it is dimmed so the white Mojang logo stays readable. */
+    enum Scene {
+        /** A snowy village with a candy cane lamp and a tall tree, shot with shaders. */
+        VILLAGE("village", 1920, 1046, 0x40000000),
+        /** A big tree with presents under it at sunset, shot with shaders. */
+        GIFTS("gifts", 1920, 1046, 0x48000000),
+        /**
+         * The first Christmas screen (1.1.0): a decorated tree, log cabin, snow golems and a frozen
+         * pond at sunset, turned into 480 x 270 pixel art and graded for a winter night.
+         */
+        LEGACY("christmas", 480, 270, 0);
+
+        final Identifier picture;
+        final int width;
+        final int height;
+        final int dim;
+
+        Scene(String file, int width, int height, int dim) {
+            this.picture = Identifier.fromNamespaceAndPath("darkmode", "textures/loading/" + file + ".png");
+            this.width = width;
+            this.height = height;
+            this.dim = dim;
+        }
+    }
 
     private WinterLoading() {
     }
 
-    /** Fills the whole {@code width} x {@code height} screen (GUI pixels), faded by {@code alpha}. */
-    static void draw(GuiGraphicsExtractor gfx, int width, int height, float alpha) {
+    /** Fills the whole {@code width} x {@code height} screen (GUI pixels) with {@code scene}, faded by {@code alpha}. */
+    static void draw(GuiGraphicsExtractor gfx, Scene scene, int width, int height, float alpha) {
         // Cover the screen: fill both ways and cut what sticks out, keeping the middle.
         double screen = width / (double) height;
-        double picture = PICTURE_W / (double) PICTURE_H;
-        int regionW = PICTURE_W;
-        int regionH = PICTURE_H;
+        double picture = scene.width / (double) scene.height;
+        int regionW = scene.width;
+        int regionH = scene.height;
         if (picture > screen) {
-            regionW = (int) Math.round(PICTURE_H * screen);
+            regionW = (int) Math.round(scene.height * screen);
         } else {
-            regionH = (int) Math.round(PICTURE_W / screen);
+            regionH = (int) Math.round(scene.width / screen);
         }
-        float u = (PICTURE_W - regionW) / 2f;
-        float v = (PICTURE_H - regionH) / 2f;
-        PixelArt.image(gfx, PICTURE, 0, 0, width, height, u, v, regionW, regionH, PICTURE_W, PICTURE_H, alpha);
+        float u = (scene.width - regionW) / 2f;
+        float v = (scene.height - regionH) / 2f;
+        PixelArt.image(gfx, scene.picture, 0, 0, width, height, u, v, regionW, regionH, scene.width, scene.height, alpha);
+        if (scene.dim != 0) {
+            gfx.fill(0, 0, width, height, PixelArt.fade(scene.dim, alpha));
+        }
         snowfall(gfx, width, height, alpha, Math.max(1, Math.round(width / (float) regionW)));
     }
 
-    /** Flakes drifting down, sized like the picture's pixels. */
+    /** Flakes drifting down, sized like the picture's pixels (one GUI pixel for the photos). */
     private static void snowfall(GuiGraphicsExtractor gfx, int width, int height, float alpha, int pixel) {
         double t = System.currentTimeMillis() / 1000.0;
         int w = width / pixel;

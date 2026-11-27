@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.0] - 2026-11-27
+
+The new Christmas loading screens.
+
+### Added
+- Christmas Village loading screen: a snowy village with a candy cane lamp and tall Christmas trees, shot in Minecraft with shaders, with light snow falling over it.
+- Christmas Gifts loading screen: a big tree with presents under it at sunset, shot in Minecraft with shaders, with light snow falling over it.
+
+### Changed
+- The Dark Mode button is now a normal button in the Options menu, under Credits & Attribution, instead of sitting in the top left corner.
+- The first Christmas loading screen is now called Christmas (legacy). If you picked it, you keep it.
+
 ## [1.2.0] - 2026-11-19
 
 ### Added
